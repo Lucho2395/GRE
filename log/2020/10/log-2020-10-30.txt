@@ -1,0 +1,422 @@
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 10:51:20[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:00:32[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:00:32[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:00:32[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:00:32[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:00:32[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 349[MESSAGGE]Undefined variable: usuarios
+
+2020-10-30 11:00:32[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 349[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 346[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 353[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 353[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 354[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 354[MESSAGGE]Undefined property: stdClass::$rol_nombre
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 355[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 356[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 356[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 359[MESSAGGE]Undefined property: stdClass::$usuario_ultimo_login
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 367[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 371[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 372[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 372[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 346[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 353[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 353[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 354[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 354[MESSAGGE]Undefined property: stdClass::$rol_nombre
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 355[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 356[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 356[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 359[MESSAGGE]Undefined property: stdClass::$usuario_ultimo_login
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 367[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 371[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 372[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:07:26[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 372[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 348[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 358[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 358[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 361[MESSAGGE]Undefined property: stdClass::$usuario_ultimo_login
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 373[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 348[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 358[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 358[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 361[MESSAGGE]Undefined property: stdClass::$usuario_ultimo_login
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 373[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:18:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 348[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 361[MESSAGGE]Undefined property: stdClass::$usuario_ultimo_login
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 373[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 348[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 361[MESSAGGE]Undefined property: stdClass::$usuario_ultimo_login
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 370[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 373[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:21:12[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 374[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 348[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 364[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 348[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 364[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 365[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 368[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$id_usuario
+
+2020-10-30 11:23:24[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 369[MESSAGGE]Undefined property: stdClass::$usuario_nickname
+
+2020-10-30 11:27:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:27:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:27:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:27:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:27:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 347[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:27:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 347[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:28:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:28:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:28:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:28:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:28:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 347[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:28:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 347[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:29:11[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:29:11[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 101[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:29:11[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:29:11[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 174[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:29:11[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 347[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:29:11[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 347[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:41:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:41:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:41:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:41:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:46:52[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:46:52[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:46:52[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:46:52[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:47:16[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:47:16[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:47:16[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:47:16[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:51:36[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 11:51:36[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 11:51:36[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 11:51:36[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 12:50:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 12:50:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 12:50:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 12:50:53[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 12:53:50[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 12:53:50[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 12:53:50[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 12:53:50[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 12:54:47[UTC -5] [ip] ::1 [lugar] Persona|guardar_nueva_persona [texto] Sin Permisos Para Acceder a la Funcion o Funcion Deshabilitada
+2020-10-30 12:56:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Undefined variable: roles
+
+2020-10-30 12:56:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 113[MESSAGGE]Invalid argument supplied for foreach()
+
+2020-10-30 12:56:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 12:56:45[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 13:02:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 13:02:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 13:02:09[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\persona\inicio.php: 286[MESSAGGE]Undefined property: stdClass::$usuario_estado
+
+2020-10-30 22:02:31[UTC -5] [ip] ::1 [lugar] PersonaController|inicio [texto] syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:03:25[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:05:08[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+
+2020-10-30 23:26:27[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\rol\accesos.php: 50[MESSAGGE]Undefined property: stdClass::$id_rol
+

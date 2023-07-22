@@ -1,0 +1,22 @@
+.no-show{
+    display: none;
+}
+.no-habil{
+    background-color: #eaa5a5 !important;
+}
+
+.texto-habilitado{
+    font-size: 13px;
+    color: #1cc88a;
+    font-weight: bold;
+}
+
+.texto-deshabilitado{
+    font-size: 13px;
+    color: #e74a3b;
+    font-weight: bold;
+}
+
+.no-habilitado{
+    background-color: #ead1d1 !important;
+}

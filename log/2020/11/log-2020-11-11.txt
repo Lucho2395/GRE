@@ -1,0 +1,5 @@
+2020-11-11 17:02:16[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 101[MESSAGGE]session_destroy(): Session object destruction failed
+
+2020-11-11 17:02:16[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\index.php: 119[MESSAGGE]Undefined index: s_
+
+2020-11-11 17:02:16[UTC -5] [ip] ::1 [lugar] Persona|inicio [texto] SIN PERMISOS SUFICIENTES DE ACCESO

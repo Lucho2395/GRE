@@ -1,0 +1,38 @@
+2020-10-29 10:53:21[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\navbar.php: 71[MESSAGGE]Undefined index: u_e
+
+2020-10-29 10:54:54[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 10:56:02[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 10:57:43[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 10:57:48[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 10:57:55[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 10:58:01[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 10:58:43[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\models\Sesion.php: 51[MESSAGGE]Undefined property: stdClass::$usuario_email
+
+2020-10-29 11:16:41[UTC -5] [ip] ::1 [lugar] Edit|info [texto] El archivo consultado app/controllers/EditController.phpno existe
+2020-10-29 12:18:07[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\admin\inicio.php: 22[MESSAGGE]Undefined index: p_s
+
+2020-10-29 12:23:31[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\admin\inicio.php: 22[MESSAGGE]Undefined index: p_s
+
+2020-10-29 12:24:15[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\view\admin\inicio.php: 22[MESSAGGE]Undefined index: p_s
+
+2020-10-29 12:30:00[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\controllers\MenuController.php: 490[MESSAGGE]Undefined variable: menu
+
+2020-10-29 12:30:03[UTC -5] [ip] ::1 [lugar] Usuario|inicio [texto] SIN PERMISOS SUFICIENTES DE ACCESO
+2020-10-29 12:30:13[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\controllers\MenuController.php: 490[MESSAGGE]Undefined variable: menu
+
+2020-10-29 12:33:37[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\controllers\MenuController.php: 490[MESSAGGE]Undefined variable: menu
+
+2020-10-29 12:33:40[UTC -5] [ip] ::1 [lugar] Usuario|inicio [texto] SIN PERMISOS SUFICIENTES DE ACCESO
+2020-10-29 12:33:50[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\controllers\MenuController.php: 490[MESSAGGE]Undefined variable: menu
+
+2020-10-29 22:44:28[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 8 IN C:\xampp\htdocs\eggPHP3\app\controllers\DatosController.php: 101[MESSAGGE]Undefined index: tmp
+
+2020-10-29 22:44:28[UTC -5] [ip] ::1 [lugar] Excepcion No Manejada [texto] [LEVEL]: 2 IN C:\xampp\htdocs\eggPHP3\app\models\Archivo.php: 31[MESSAGGE]getimagesize(): Filename cannot be empty
+
+2020-10-29 23:13:26[UTC -5] [ip] ::1 [lugar] Login|inicio [texto] SIN PERMISOS SUFICIENTES DE ACCESO
