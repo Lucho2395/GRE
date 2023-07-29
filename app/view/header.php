@@ -26,9 +26,12 @@
     <!-- Custom styles for this template-->
     <link href="<?= _SERVER_ . _STYLES_ADMIN_;?>css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?= _SERVER_ . _STYLES_ADMIN_;?>css/huevito.css" rel="stylesheet">
+    <link href="<?= _SERVER_ . _STYLES_ADMIN_;?>vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <!-- Custom styles for this page -->
     <link href="<?= _SERVER_ . _STYLES_ADMIN_;?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <script src="<?= _SERVER_ . _STYLES_ADMIN_;?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= _SERVER_ . _STYLES_ADMIN_;?>vendor/jquery/jquery.min.js"></script>
     <!-- SweetAlert -->
     <link rel="stylesheet" href="<?=_SERVER_ . _LIBS_;?>sweetalert/sweetalert2.min.css">
+    <link rel="stylesheet" href="<?= _SERVER_ . _STYLES_ADMIN_;?>css/select2.min.css">
 </head>

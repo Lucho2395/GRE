@@ -55,6 +55,7 @@
 <!--SweetAlert-->
 <script src="<?=_SERVER_ . _LIBS_;?>sweetalert/sweetalert2.min.js"></script>
 <script src="<?=_SERVER_ . _JS_;?>main-sweet.js"></script>
+<script src="<?= _SERVER_ . _STYLES_ADMIN_;?>js/select2.full.min.js"></script>
 
 </body>
 

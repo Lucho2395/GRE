@@ -33,7 +33,7 @@
                     <img src="<?=_SERVER_ . _STYLES_LOGIN_;?>images/bufeo.jpg" alt="Logo de Proyecto">
                 </div>
 
-                <span class="login100-form-title p-t-20 p-b-45">EggPHP3</span>
+                <span class="login100-form-title p-t-20 p-b-45"><?= _TITLE_ ?></span>
 
                 <div class="wrap-input100 validate-input m-b-10">
                     <input class="input100" type="text" name="usuario_nickname" id="usuario_nickname" placeholder="Usuario">
