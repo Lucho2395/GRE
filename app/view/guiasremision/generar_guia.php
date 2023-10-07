@@ -8,6 +8,55 @@
  */
 ?>
 
+<!--Modal para Clientes-->
+<div class="modal fade" id="basicModal_cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="max-width: 80% !important;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Clientes Registrados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-12">
+                    <a style="float: right;" href="<?php echo _SERVER_;?>Cliente/inicio" class="btn btn-success"><i class="fa fa-pencil"></i> Cliente Nuevo</a>
+                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <thead class="text-capitalize">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>DNI ó RUC </th>
+                            <th>Dirección</th>
+                            <th>Telefono o Celular</th>
+                            <th>Acción</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $a = 1;
+                        foreach ($clientes as $m){
+                            ?>
+                            <tr>
+                                <td><?php echo $m->cliente_razonsocial;?></td>
+                                <td><?php echo $m->cliente_numero;?></td>
+                                <td><?php echo $m->cliente_direccion;?></td>
+                                <td><?php echo $m->cliente_telefono;?></td>
+                                <td><button type="button" data-dismiss="modal" class="btn btn-xs btn-success btne" onclick="agregarPersona('<?= $m->cliente_razonsocial;?>','<?= $m->cliente_numero;?>','<?= $m->cliente_direccion;?>','<?= $m->id_tipodocumento;?>')" ><i class="fa fa-check-circle"></i> Elegir Cliente</button></td>
+                            </tr>
+                            <?php
+                            $a++;
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="main-panel">
     <div class="content">
         <div class="page-inner">
@@ -23,14 +72,14 @@
                             <div class="row ">
                                 <div class="form-group col-md-3">
                                     <label for="tipo_guia">Tipo de Guía</label>
-                                    <select class="form-control" name="tipo_guia" id="tipo_guia" onchange="serie_correlativo();tipo_guia();" style="height: 44px; font-size: 12px;">
-                                        <option style="font-size: 10pt;" value="09">GUIA DE REMISION REMITENTE</option>
-                                        <option style="font-size: 10pt;" value="31" selected>GUIA DE REMISION TRANSPORTISTA</option>
+                                    <select class="form-control" name="tipo_guia" id="tipo_guia" onchange="serie_correlativo();tipo_guia();" style="height: 44px;">
+                                        <option style="font-size: 10pt;" value="09" selected>GUIA DE REMISION REMITENTE</option>
+                                        <option style="font-size: 10pt;" value="31">GUIA DE REMISION TRANSPORTISTA</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="id_serie">Serie</label>
-                                    <select class="form-control" name="id_serie" id="id_serie" style="height: 44px; font-size: 12px;">
+                                    <select class="form-control" name="id_serie" id="id_serie" style="height: 44px;">
                                         <option value="">Seleccionar</option>
                                     </select>
                                 </div>
@@ -45,26 +94,33 @@
                             </div>
                             <div class="row">
                                 <input type="hidden" id="contenido" name="contenido">
-                                <div class="form-group ocul col-md-3">
-                                    <label for="id_cliente">Cliente</label>
-                                    <select class="form-control" name="id_cliente" id="id_cliente" style="height: 44px; font-size: 12px;">
-                                        <option value="">Seleccionar</option>
+                                <div class="col-lg-12" style="text-align: center">
+                                    <h5><strong>Datos del Cliente</strong></h5>
+                                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#basicModal_cliente" style="width: 20%"><i class="fa fa-search"></i> Buscar Cliente</button>
+                                </div>
+                                <div class="form-group ocul col-md-2">
+                                    <label>Tipo Documento</label>
+                                    <select  class="form-control" name="select_tipodocumento" id="select_tipodocumento" onchange="select_tipodocumento(this.value)">
+                                        <option value="">Seleccionar...</option>
                                         <?php
-                                        foreach ($clientes as $s){
-                                            ?>
-                                            <option value="<?= $s->id_cliente?>"><?= $s->cliente_nombre;?></option>
-                                            <?php
+                                        foreach ($tipos_documentos as $td){
+                                            ($td->id_tipodocumento == 2)?$sele='selected':$sele='';
+                                            echo "<option value='".$td->id_tipodocumento."' ".$sele.">".$td->tipodocumento_identidad."</option>";
                                         }
                                         ?>
                                     </select>
                                 </div>
-                                <div class="form-group ocul_transportista col-lg-3">
-                                    <label for="tipo_trans_transportista">Tipo de Transporte</label>
-                                    <select name="tipo_trans_transportista" class="form-control" id="tipo_trans_transportista">
-                                        <option value=''>Seleccionar...</option>
-                                        <option value='1'>TERRESTRE</option>
-                                        <option value='3'>FLUVIAL</option>
-                                    </select>
+                                <div class="form-group ocul col-md-2">
+                                    <label for="client_number">DNI ó RUC:</label>
+                                    <input class="form-control" type="text" id="client_number" value="11111111" placeholder="Ingrese Número..." onchange="consultar_documento(this.value, 'client_name', 'client_address',)">
+                                </div>
+                                <div class="form-group ocul col-md-4">
+                                    <label for="client_name">Nombre:</label>
+                                    <input class="form-control" type="text" id="client_name" value="PÚBLICO EN GENERAL" placeholder="Ingrese Razón Social...">
+                                </div>
+                                <div class="form-group ocul col-md-4">
+                                    <label for="client_name">Domicilio Fiscal:</label>
+                                    <input class="form-control" type="text" id="client_address" value="PÚBLICO EN GENERAL" placeholder="Ingrese Razón Social...">
                                 </div>
                                 <div class="form-group ocul_remitente col-lg-3">
                                     <label for="tipo_trans">Tipo de Transporte</label>
@@ -77,7 +133,7 @@
                                     <label for="motivo_tras">Motivo de Traslado</label>
                                     <select class="form-control" name="motivo_tras" id="motivo_tras" onchange="select_motivo_tras()">
                                         <option value="">Seleccionar...</option>
-                                        <option value="01">VENTA</option>
+                                        <option value="01" selected>VENTA</option>
                                         <option value="02">COMPRA</option>
                                         <option value="03">VENTA CON ENTREGA A TERCEROS</option>
                                         <option value="04">TRASLADO ENTRE ESTABLECIMIENTOS</option>
@@ -86,7 +142,7 @@
                                         <option value="07">RECOJO DE BIENES TRANSFORMADOS</option>
                                         <option value="08">IMPORTACION</option>
                                         <option value="09">EXPORTACION</option>
-                                        <option value="13" selected >OTROS</option>
+                                        <option value="13" >OTROS</option>
                                         <option value="14">VENTA SUJETA A CONFIRMACION DEL COMPRADOR</option>
                                         <option value="17">TRASLADO DE BIENES PARA TRANSFORMACIÓN</option>
                                         <option value="18">TRASLADO EMISOR ITINERANTE CP</option>
@@ -95,6 +151,53 @@
                                 <div class="form-group ocul_remitente col-lg-3" id="div_otros">
                                     <label for="motivo_tras_otros">Detalle OTROS</label>
                                     <textarea name="motivo_tras_otros" id="motivo_tras_otros" style="font-size: 10pt;" rows="1" class="form-control" maxlength="70"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <div class="card-header" style="background: #E5EDFDFF; color: #585a64">
+                                        <h5 data-toggle="collapse" class="text-black">ITEMS</h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr style="font-weight: bold;text-align: center">
+                                                <th>Item</th>
+                                                <th>Concepto</th>
+                                                <th>U.M</th>
+                                                <th>Cant.</th>
+                                                <th>Peso <span id="span_peso_unidad"></span></th>
+                                                <th>Acción</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="contenido_detalle_guia"></tbody>
+                                            <tr>
+                                                <td id="conteo">1</td>
+                                                <td>
+                                                    <textarea name="descripcion" id="descripcion" cols="50" rows="2" maxlength="250" style="font-size: 10pt;" class="form-control"></textarea>
+                                                </td>
+                                                <td style="width: 150px;">
+                                                    <select id="um_guia" type="text" class="form-control" name="um_guia">
+                                                        <?php
+                                                        foreach ($unidadMedida as $m){
+                                                            ($m->unidad_codigo=='NIU')?$selee='selected':$selee='';
+                                                            ?>
+                                                            <option value="<?= $m->unidad_nombre ?>" <?= $selee;?>><?= $m->unidad_codigo .' - '.$m->unidad_nombre?></option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input style="background: #fff !important;color:#000 !important;text-align: right" id="cant_guia" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
+                                                </td>
+                                                <td>
+                                                    <input style="background: #fff !important;color:#000 !important;text-align: right" id="peso_item" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
+                                                </td>
+                                                <td><a style="color:#fff;font-weight: bold;font-size: large" onclick="add()" class="btn btn-success"><i class="fa fa-check"></i></a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -129,57 +232,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="form-group col-md-12">
-                                    <div class="card-header" style="background: #E5EDFDFF; color: #585a64">
-                                        <h5 data-toggle="collapse" class="text-black">ITEMS</h5>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                            <tr style="font-weight: bold;text-align: center">
-                                                <th>Item</th>
-                                                <th>Concepto</th>
-                                                <th>U.M</th>
-                                                <th>Cant.</th>
-                                                <th>Peso <span id="span_peso_unidad"></span></th>
-                                                <th>Acción</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody id="contenido_detalle_guia"></tbody>
-                                            <tr>
-                                                <td id="conteo">1</td>
-                                                <td>
-                                                    <textarea name="descripcion" id="descripcion" cols="50" rows="2" maxlength="250" style="font-size: 10pt;" class="form-control"></textarea>
-                                                </td>
-                                                <td>
-                                                    <select id="um_guia" type="text" class="form-control" name="um_guia">
-                                                        <?php
-                                                        foreach ($unidades as $m){
-                                                            ($m->medida_codigo_unidad=='NIU')?$selee='selected':$selee='';
-                                                            ?>
-                                                            <option value="<?= $m->medida_codigo_unidad ?>" <?= $selee;?>><?= $m->medida_nombre?></option>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <input style="background: #fff !important;color:#000 !important;text-align: right" id="cant_guia" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
-                                                </td>
-                                                <td>
-                                                    <input style="background: #fff !important;color:#000 !important;text-align: right" id="peso_item" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
-                                                </td>
-                                                <td><a style="color:#fff;font-weight: bold;font-size: large" onclick="add()" class="btn btn-success"><i class="fa fa-check"></i></a></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="row" id="datos_transportista" >
                                 <div class="col-md-12">
                                     <div class="card" style="border: 0 solid #74BFF6F7; border-radius: 20px 20px 0 0 ">
-                                        <div data-toggle="collapse" href="#div_transportista" class="card-header text-black" style="background: #E5EDFDFF; border-radius: 20px 20px 0 0; color: #585a64">
+                                        <div data-toggle="collapse" href="#div_transportista" class="card-header text-black" style="background: #E5EDFDFF;  color: #585a64">
                                             <h5>DATOS TRANSPORTISTA</h5>
                                         </div>
                                         <div id="div_transportista" class="card-body collapse">
@@ -208,10 +264,7 @@
                                                 </div>
                                                 <div class="col-lg-3">
                                                     <label for="num_placa_trans">Transportista Nº Placa</label>
-                                                    <select name="num_placa_trans" id="num_placa_trans" class="form-control">
-                                                        <option value="">seleccionar...</option>
-                                                    </select>
-                                                    <!--<input type="text" id="num_placa_trans" class="form-control" placeholder="SIN GUIONES">-->
+                                                    <input type="text" id="num_placa_trans" class="form-control" placeholder="SIN GUIONES">
                                                 </div>
                                                 <div class="col-lg-3 ocul_transportista">
                                                     <label for="tuc_vehiculo">TUC Vehículo principal</label>
@@ -220,10 +273,6 @@
                                                 <div class="col-lg-3">
                                                     <label for="certificado_mtc">Certificado (MTC)</label>
                                                     <input type="text" id="certificado_mtc" name="certificado_mtc" class="form-control" placeholder="(opcional)">
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <label for="carreta">Carreta</label>
-                                                    <input type="text" id="carreta" name="carreta" class="form-control" placeholder="(opcional)">
                                                 </div>
                                             </div>
                                         </div>
@@ -238,65 +287,33 @@
                                         </div>
                                         <div id="div_conductor" class="card-body collapse">
                                             <div class="row">
-                                                <div class="col-md-3">
-                                                    <label for="id_conductor">Conductor</label>
-                                                    <select name="id_conductor" id="id_conductor" class="form-control" style="width: 99%">
-                                                        <option value="">Seleccionar...</option>
-                                                        <?php
-                                                        foreach ($conductores as $c){
-                                                            $licencia = $this->facturacion->listar_licencia_conducir_x_person($c->id_person);
-                                                            $licencia_con = 'SIN LICENCIA';
-                                                            $str_licencia = '';
-                                                            if(!empty($licencia)){
-                                                                foreach ($licencia as $l){
-                                                                    if(!empty($l->documentacion_referencia)){
-                                                                        $licencia_con = $l->documentacion_referencia;
-                                                                        $fecha_ven = $l->documentacion_fin;
-                                                                    }else{
-                                                                        $licencia_con = 'CON LICENCIA, PERO SIN DIGITAR';
-                                                                        $fecha_ven = '';
-                                                                    }
-                                                                    $str_licencia .= $licencia_con. ' - ' .$fecha_ven. ' || ';
-                                                                }
-                                                                $conductor = $c->person_name. '  ' .$c->person_surname.' '.$c->person_surname2;
-                                                                ?>
-                                                                <option value="<?= $c->id_person; ?>"><?= $c->person_dni. ' | ' .$conductor. ' | ' .$str_licencia; ?></option>
-                                                                <?php
-                                                            }
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                                <!--<div class="col-lg-2">
+                                                <div class="col-lg-2">
                                                     <label for="tipo_documento_con">Tipo Documento</label>
                                                     <select name="tipo_documento_con" id="tipo_documento_con" class="form-control">
-                                                        <option value="6">RUC</option>
+                                                        <!--<option value="6">RUC</option>-->
                                                         <option value="1">DNI</option>
                                                         <option value="4">CARNET DE EXTRANJERIA</option>
                                                         <option value="7">PASAPORTE</option>
                                                         <option value="A">CEDULA</option>
                                                         <option value="0">NO DOMICIALIADO</option>
                                                     </select>
-                                                </div>-->
-                                                <!--<div class="col-md-2">
+                                                </div>
+                                                <div class="col-md-2">
                                                     <label for="numero_doc_con">Nº documento</label>
                                                     <input type="text" id="numero_doc_con" class="form-control" onkeyup="validar_numeros(this.id)">
-                                                </div>-->
+                                                </div>
                                                 <div class="col-md-3">
                                                     <label for="nombre_con">Nombre del Conductor</label>
-                                                    <textarea readonly name="nombre_con" id="nombre_con" rows="1" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
+                                                    <textarea name="nombre_con" id="nombre_con" rows="1" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
                                                     <!--<input type="text" id="nombre_con" onkeyup="mayuscula(this.id)" name="nombre_con" class="form-control" maxlength="250">-->
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label for="apellido_con">Apellidos del Conductor</label>
-                                                    <textarea readonly name="apellido_con" id="apellido_con" rows="1" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
+                                                    <textarea name="apellido_con" id="apellido_con" rows="1" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-2">
                                                     <label for="licencia_con">Licencia de conducir</label>
-                                                    <!--                                                    <input type="text" id="licencia_con" class="form-control">-->
-                                                    <select class="form-control" name="licencia_con" id="licencia_con" onchange="escoger_licencia()">
-                                                        <option>Seleccionar Conductor...</option>
-                                                    </select>
+                                                    <input type="text" id="licencia_con" name="licencia_con" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -328,7 +345,7 @@
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <label for="nombre_dest">Nombre del Destinatario</label>
-                                                    <textarea readonly name="nombre_dest" id="nombre_dest" rows="2" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
+                                                    <textarea name="nombre_dest" id="nombre_dest" rows="2" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
                                                     <!--<input type="text" id="nombre_con" onkeyup="mayuscula(this.id)" name="nombre_con" class="form-control" maxlength="250">-->
                                                 </div>
                                                 <div class="col-lg-3">
@@ -352,8 +369,9 @@
                                                 <div class="col-md-5">
                                                     <label for="ubigeo_partida">Ubigeo</label>
                                                     <select name="ubigeo_partida" id="ubigeo_partida" class="form-control" style="width: 100%">
+                                                        <option value="">Seleccionar...</option>
                                                         <?php foreach ( $ubigeo as $u ){
-                                                            ($u->ubigeo_distrito=='IQUITOS')? $select='selected' : $select='' ;
+                                                            ($u->ubigeo_distrito=='')? $select='selected' : $select='' ;
                                                             ?>
                                                             <option value="<?= $u->ubigeo_cod ?>" <?= $select ?> > <?= $u->ubigeo_distrito.' | '.$u->ubigeo_provincia.' | '.$u->ubigeo_departamento.' | '.$u->ubigeo_cod  ?> </option>
                                                         <?php } ?>
@@ -378,8 +396,9 @@
                                                 <div class="col-md-5" >
                                                     <label for="ubigeo_llegada">Ubigeo</label>
                                                     <select name="ubigeo_llegada" id="ubigeo_llegada" class="form-control" style="width: 100%">
+                                                        <option value="">Seleccionar...</option>
                                                         <?php foreach ( $ubigeo as $u ){
-                                                            ($u->ubigeo_cod=='160113')? $select='selected' : $select='' ;
+                                                            ($u->ubigeo_cod=='')? $select='selected' : $select='' ;
                                                             ?>
                                                             <option value="<?= $u->ubigeo_cod ?>" <?= $select ?> > <?= $u->ubigeo_distrito.' | '.$u->ubigeo_provincia.' | '.$u->ubigeo_departamento.' | '.$u->ubigeo_cod  ?> </option>
                                                         <?php } ?>
@@ -387,7 +406,7 @@
                                                 </div>
                                                 <div class="col-md-7">
                                                     <label for="direccion_llegada">Dirección</label>
-                                                    <textarea name="direccion_llegada" id="direccion_llegada" maxlength="150" rows="2" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control">CARRETERA PAUJIL ZONA AGRARIA ETAPA I KM 1.0</textarea>
+                                                    <textarea name="direccion_llegada" id="direccion_llegada" maxlength="150" rows="2" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
                                                     <!--<input type="text" id="direccion_llegada" onkeyup="mayuscula(this.id)" name="direccion_llegada" class="form-control">-->
                                                 </div>
 
@@ -426,6 +445,7 @@
     </div>
 </div>
 <script src="<?php echo _SERVER_ . _JS_;?>domain.js"></script>
+<script src="<?php echo _SERVER_ . _JS_;?>cliente.js"></script>
 <script type="text/javascript">
 
     const vehiculos = [];
@@ -435,144 +455,24 @@
     let tipo_inspeccion ;
     let tuc ;
     let certificado_mtc ;
-    let carreta ;
-    <?php
-    foreach ($vehiculos as $v){
-    $doc = $this->facturacion->listar_TUC_x_unidad($v->id_vehiculo);
-    $tuc = '';
-    $mtc = '';
-    $carreta = '';
-    if(!empty($doc)){
-        $tuc = $v->documento_unidad_Npartida_registral;
-    }
-    if($v->vehiculo_placa=='BAT898' || $v->vehiculo_placa=='BAS846'){
-        $mtc = '2498-2019 MTC/17.02';
-    }else if($v->vehiculo_placa=='D8C703' || $v->vehiculo_placa=='D9H821' || $v->vehiculo_placa=='D9J847'){
-        $mtc = '1785-2019 MTC/17.02';
-        if($v->vehiculo_placa=='D9H821'){
-            $carreta = 'F1V986';
-        }
-        if($v->vehiculo_placa=='D9J847'){
-            $carreta = 'F1W974';
-        }
-    }else{
-        $mtc = 'T-056869-2019';
-    }
-    ?>
-    tipo_vehiculo = <?= $v->tipo_inspeccion;?>;
-    id_vehiculo = <?= $v->id_vehiculo;?>;
-    vehiculo_placa = '<?= $v->vehiculo_placa;?>';
-    tipo_inspeccion = <?= $v->tipo_inspeccion;?>;
-    tuc = '<?= $tuc;?>';
-    certificado_mtc = '<?= $mtc;?>';
-    carreta = '<?= $carreta;?>';
-    vehiculos.push({
-        'id_vehiculo' : id_vehiculo,
-        'vehiculo_placa' : vehiculo_placa,
-        'tipo_inspeccion' : tipo_inspeccion,
-        'tuc' : tuc,
-        'certificado_mtc' : certificado_mtc,
-        'carreta' : carreta
-    })
 
-    <?php
-    }
-    ?>
     $(document).ready(function(){
-        $("#id_cliente").select2();
-        $("#id_conductor").select2();
-        $("#num_placa_trans").select2();
         $("#ubigeo_llegada").select2();
         $("#ubigeo_partida").select2();
         $('#span_peso_unidad').html($("#peso_unidad_medida").val())
         tipo_guia();
         serie_correlativo()
-    })
-    $('#id_conductor').on('select2:select', function(e) {
-        $('#nombre_con').val('')
-        $('#apellido_con').val('')
-        $('#licencia_con').val('')
-        let conductor = e.params.data.text.split(' | ');
-        let ruc = conductor[0];
-        let cond = conductor[1].split('  ')
-        let nombre = cond[0]
-        let apellido = cond[1]
-        let licencia = conductor[2]
-        let arr_licencia = conductor[2].split(' || ')
-        let dato_lic = "<option value=''>Seleccionar...</option>"
-        for (let i=0; i<arr_licencia.length-1;i++){
-            let part_lic = arr_licencia[i].split(' - ')
-            dato_lic += "<option value='"+part_lic[0]+"'>"+part_lic[0]+ ' | '+part_lic[1]+"</option>"
-            // if(part_lic[1].length > 0){
-            //     let fecha_ven = new Date(part_lic[1])
-            //     let fecha_actual = new Date()
-            //     if(fecha_actual > fecha_ven){
-            //         respuesta('La Licencia está vencida','error')
-            //     }
-            // }else{
-            //     respuesta('La Licencia no tiene registro','error')
-            // }
-        }
-        $('#nombre_con').val(nombre)
-        $('#apellido_con').val(apellido)
-        $('#licencia_con').html(dato_lic)
-
+        $('#div_otros').hide()
     });
-    $('#num_placa_trans').on('select2:select', function(e) {
-        /*let num_placa_trans = e.params.data.text.split('  ');
-        $('#tuc_vehiculo').val(num_placa_trans[1])*/
 
-        let num_placa_trans = $('#num_placa_trans').val();
-        vehiculos.map(veh=>{
-            if(veh['vehiculo_placa']===num_placa_trans){
-                $('#tuc_vehiculo').val(veh['tuc'])
-                $('#certificado_mtc').val(veh['certificado_mtc'])
-                $('#carreta').val(veh['carreta'])
-            }
-        })
-    });
-    function escoger_licencia(){
-        let licencia = $('#licencia_con option:selected').text().split(' | ')
-        if(licencia[1].length > 0){
-            let fecha_ven = new Date(licencia[1])
-            let fecha_actual = new Date()
-            if(fecha_actual > fecha_ven){
-                respuesta('La Licencia está vencida, Seleccione Otro','error')
-                $('#licencia_con').val('')
-            }
-        }else{
-            respuesta('La Licencia no tiene registro, Seleccione Otro','error')
-            $('#licencia_con').val('')
-        }
-        console.log(licencia)
-    }
-
-    document.getElementById('tipo_trans_transportista').addEventListener('change', function() {
-        let valor = this.value
-        let opciones_veh = "<option value=''>Seleccionar...</option>";
-        vehiculos.map(veh=>{
-            if(veh['tipo_inspeccion']==valor){
-                opciones_veh += "<option value='"+veh['vehiculo_placa']+"'>"+veh['vehiculo_placa']+"</option>"
-            }
-        })
-        $('#num_placa_trans').html(opciones_veh);
-    });
     function tipo_guia(){
         let tipo_guia = $("#tipo_guia").val();
         if(tipo_guia=='31'){
             $(".ocul_remitente").hide();
             $(".ocul_transportista").show();
-            let opciones_veh = "<option value=''>Seleccionar...</option>";
-            $('#num_placa_trans').html(opciones_veh);
         }else if(tipo_guia=='09'){
             $(".ocul_remitente").show();
             $(".ocul_transportista").hide();
-
-            let opciones_veh = "<option value=''>Seleccionar...</option>";
-            vehiculos.map(veh=>{
-                opciones_veh += "<option value='"+veh['vehiculo_placa']+"'>"+veh['vehiculo_placa']+ '  ' +veh['tuc']+"</option>"
-            })
-            $('#num_placa_trans').html(opciones_veh);
         }
         console.log(tipo_guia)
     }
@@ -722,12 +622,10 @@
         let id_empresa = $('#id_empresa').val();
         let tipo_guia = $('#tipo_guia').val();
         let id_serie = $('#id_serie').val();
-        let id_cliente = $('#id_cliente').val();
         let fecha_emision = $('#fecha_emision').val();
         let motivo_tras = $('#motivo_tras').val();
         let motivo_tras_otros = $('#motivo_tras_otros').val();
         let tipo_trans = $('#tipo_trans').val();
-        let tipo_trans_transportista = $('#tipo_trans_transportista').val();
         let fecha_tras = $('#fecha_tras').val();
         let peso_bruto = $('#peso_bruto').val();
         let peso_unidad_medida = $('#peso_unidad_medida').val();
@@ -751,7 +649,6 @@
         //TRANSPORTISTA
         let tuc_vehiculo = $('#tuc_vehiculo').val();
         let certificado_mtc = $('#certificado_mtc').val();
-        let carreta = $('#carreta').val();
         let tipo_documento_dest = $('#tipo_documento_dest').val();
         let numero_doc_dest = $('#numero_doc_dest').val();
         let nombre_dest = $('#nombre_dest').val();
@@ -760,7 +657,6 @@
         valor = validar_campo_vacio('id_empresa',id_empresa, valor)
         valor = validar_campo_vacio('tipo_guia',tipo_guia, valor)
         valor = validar_campo_vacio('id_serie',id_serie, valor)
-        valor = validar_campo_vacio('id_cliente',id_cliente, valor)
         valor = validar_campo_vacio('peso_bruto',peso_bruto, valor)
         valor = validar_campo_vacio('peso_unidad_medida',peso_unidad_medida, valor)
         valor = validar_campo_vacio('fecha_tras',fecha_tras, valor)
@@ -791,7 +687,6 @@
             valor = validar_campo_vacio('numero_doc_trans',numero_doc_trans, valor)
             valor = validar_campo_vacio('denominacion_trans',denominacion_trans, valor)
         }else{
-            valor = validar_campo_vacio('tipo_trans_transportista',tipo_trans_transportista, valor)
             valor = validar_campo_vacio('tipo_documento_dest',tipo_documento_dest, valor)
             valor = validar_campo_vacio('numero_doc_dest',numero_doc_dest, valor)
             valor = validar_campo_vacio('nombre_dest',nombre_dest, valor)
@@ -808,11 +703,9 @@
                         'id_empresa': id_empresa,
                         'tipo_guia': tipo_guia,
                         'id_serie': id_serie,
-                        'id_cliente': id_cliente,
                         'fecha_emision':fecha_emision ,
                         'motivo_tras': motivo_tras,
                         'motivo_tras_otros': motivo_tras_otros,
-                        'tipo_trans_transportista':tipo_trans_transportista ,
                         'tipo_trans':tipo_trans ,
                         'fecha_tansp':fecha_tras ,
                         'peso_bruto':peso_bruto ,
@@ -824,7 +717,6 @@
                         'num_placa_trans': num_placa_trans ,
                         'tuc_vehiculo': tuc_vehiculo ,
                         'certificado_mtc': certificado_mtc ,
-                        'carreta': carreta ,
                         'tipo_documento_dest': tipo_documento_dest ,
                         'numero_doc_dest': numero_doc_dest ,
                         'nombre_dest': nombre_dest ,
@@ -1054,6 +946,16 @@
     document.getElementById('peso_unidad_medida').addEventListener('change', function(){
         $('#span_peso_unidad').html(this.value)
     })
+
+    function agregarPersona(cliente_razonsocial,client_numero,cliente_direccion,id_tipodocumento){
+        $('#select_tipodocumento').val(id_tipodocumento)
+        $('#client_number').val(client_numero)
+        $('#client_name').val(cliente_razonsocial)
+        $('#client_direccion').val(cliente_direccion)
+        respuesta('El cliente se agregó correctamente!','success');
+
+    }
+
 
 </script>
 

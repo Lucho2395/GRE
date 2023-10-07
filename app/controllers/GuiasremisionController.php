@@ -12,6 +12,7 @@ require "app/models/Usuario.php";
 require "app/models/Empresa.php";
 require 'app/models/Rol.php';
 require 'app/models/Archivo.php';
+require 'app/models/Cliente.php';
 class GuiasremisionController
 {
     private $guiasremision;
@@ -20,6 +21,8 @@ class GuiasremisionController
     private $rol;
     private $archivo;
     private $encriptar;
+    private $log;
+    private $cliente;
     public function __construct(){
         $this->guiasremision = new Guiasremision();
         $this->empresa = new Empresa();
@@ -27,6 +30,8 @@ class GuiasremisionController
         $this->rol = new Rol();
         $this->archivo = new Archivo();
         $this->encriptar = new Encriptar();
+        $this->cliente = new Cliente();
+        $this->log = new Log();
     }
 
     public function generar_guia(){
@@ -35,11 +40,15 @@ class GuiasremisionController
             // en funciones para llamar vistas y la instaciamos
             $this->nav = new Navbar();
             $navs = $this->nav->listar_menus($this->encriptar->desencriptar($_SESSION['ru'],_FULL_KEY_));
+            $id_empresa = $this->encriptar->desencriptar($_SESSION['em'],_FULL_KEY_);
             //Listamos los usuarios del sistema
             $empresas = $this->empresa->listar_empresas();
             $roles = $this->rol->listar_roles_superadmin();
             $ubigeo = $this->guiasremision->listar_ubigeos();
-            $series = $this->guiasremision->listar_series();
+            $series = $this->guiasremision->listar_series_x_empresa($id_empresa);
+            $unidadMedida = $this->guiasremision->listar_unidades_medida();
+            $tipos_documentos = $this->cliente->listar_tipodocumentos();
+            $clientes = $this->cliente->listar_clientes();
 
 
             //Hacemos el require de los archivos a usar en las vistas

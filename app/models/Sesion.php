@@ -19,7 +19,7 @@ class Sesion{
     //Obtiene datos del usuario actual consultado
     public function obtener_informacion($id_usuario){
         try{
-            $sql = 'select u.id_usuario, u.id_persona, u.usuario_contrasenha, u.usuario_creacion , u.usuario_nickname, u.usuario_imagen, u.usuario_email, u.usuario_estado, p.persona_nombre, p.persona_apellido_paterno, p.persona_apellido_materno, p.persona_nacimiento, p.persona_telefono, u.id_rol, r.rol_nombre from usuarios u inner join personas p on u.id_persona = p.id_persona inner join roles r on r.id_rol = u.id_rol where u.id_usuario = ? and u.usuario_estado = 1 limit 1';
+            $sql = 'select u.id_usuario, u.id_persona, u.usuario_contrasenha, u.usuario_creacion , u.usuario_nickname, u.usuario_imagen, u.usuario_email, u.usuario_estado, p.persona_nombre, p.persona_apellido_paterno, p.persona_apellido_materno, p.persona_nacimiento, p.persona_telefono, u.id_rol, r.rol_nombre, u.id_empresa from usuarios u inner join personas p on u.id_persona = p.id_persona inner join roles r on r.id_rol = u.id_rol where u.id_usuario = ? and u.usuario_estado = 1 limit 1';
             $stm = $this->pdo->prepare($sql);
             $stm->execute([$id_usuario]);
             $result = $stm->fetch();
@@ -32,7 +32,7 @@ class Sesion{
     //Obtiene datos del usuario segun el usuario_nickname enviado
     public function consultar_usuario($usuario_nickname){
         try{
-            $sql = 'select u.id_usuario, u.id_persona, u.usuario_contrasenha, u.usuario_creacion , u.usuario_nickname, u.usuario_imagen, u.usuario_estado, u.usuario_email, p.persona_nombre, p.persona_apellido_paterno, p.persona_apellido_materno, p.persona_nacimiento, p.persona_telefono, u.id_rol, r.rol_nombre from usuarios u inner join personas p on u.id_persona = p.id_persona inner join roles r on u.id_rol = r.id_rol where u.usuario_nickname = ? and usuario_estado = 1 limit 1';
+            $sql = 'select u.id_usuario, u.id_persona, u.usuario_contrasenha, u.usuario_creacion , u.usuario_nickname, u.usuario_imagen, u.usuario_estado, u.usuario_email, p.persona_nombre, p.persona_apellido_paterno, p.persona_apellido_materno, p.persona_nacimiento, p.persona_telefono, u.id_rol, r.rol_nombre, u.id_empresa from usuarios u inner join personas p on u.id_persona = p.id_persona inner join roles r on u.id_rol = r.id_rol where u.usuario_nickname = ? and usuario_estado = 1 limit 1';
             $stm = $this->pdo->prepare($sql);
             $stm->execute([$usuario_nickname]);
             $result = $stm->fetch();
@@ -58,6 +58,7 @@ class Sesion{
         $_SESSION['p_t'] = $this->encriptar->encriptar($usuario->persona_telefono,_FULL_KEY_);
         $_SESSION['ru'] = $this->encriptar->encriptar($usuario->id_rol,_FULL_KEY_);
         $_SESSION['rn'] = $this->encriptar->encriptar($usuario->rol_nombre,_FULL_KEY_);
+        $_SESSION['em'] = $this->encriptar->encriptar($usuario->id_empresa,_FULL_KEY_);
         $_SESSION['tn'] = $this->encriptar->encriptacion_triple($usuario->usuario_contrasenha, $usuario->id_usuario, $usuario->usuario_creacion);
         if($uso_cookies){
             setcookie('c_u', $this->encriptar->encriptar($usuario->id_user,_FULL_KEY_), time() + _TIEMPO_COOKIE, "/; samesite=strict");
@@ -95,6 +96,7 @@ class Sesion{
         unset($_SESSION['p_t']);
         unset($_SESSION['ru']);
         unset($_SESSION['rn']);
+        unset($_SESSION['em']);
         unset($_SESSION['tn']);
 
         setcookie('c_u', '1', time() - _TIEMPO_COOKIE, "/; samesite=strict");

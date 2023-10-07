@@ -64,6 +64,7 @@ class LoginController{
                                 "p_m" => $usuario->persona_apellido_materno,
                                 "ru" => $usuario->id_rol,
                                 "rn" => $usuario->rol_nombre,
+                                "em" => $usuario->id_empresa,
                                 "tn" => $this->encriptar->encriptacion_triple($usuario->usuario_contrasenha, $usuario->id_usuario, $usuario->usuario_creacion)
                             );
                         } else {
