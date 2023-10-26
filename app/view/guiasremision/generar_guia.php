@@ -100,19 +100,19 @@
                                 </div>
                                 <div class="form-group ocul col-md-2">
                                     <label>Tipo Documento</label>
-                                    <select  class="form-control" name="select_tipodocumento" id="select_tipodocumento" onchange="select_tipodocumento(this.value)">
+                                    <select  class="form-control" name="select_tipodocumento" id="select_tipodocumento" >
                                         <option value="">Seleccionar...</option>
                                         <?php
                                         foreach ($tipos_documentos as $td){
-                                            ($td->id_tipodocumento == 2)?$sele='selected':$sele='';
-                                            echo "<option value='".$td->id_tipodocumento."' ".$sele.">".$td->tipodocumento_identidad."</option>";
+                                            ($td->tipodocumento_codigo == 1)?$sele='selected':$sele='';
+                                            echo "<option value='".$td->tipodocumento_codigo."' ".$sele.">".$td->tipodocumento_identidad."</option>";
                                         }
                                         ?>
                                     </select>
                                 </div>
                                 <div class="form-group ocul col-md-2">
                                     <label for="client_number">DNI ó RUC:</label>
-                                    <input class="form-control" type="text" id="client_number" value="11111111" placeholder="Ingrese Número..." onchange="consultar_documento(this.value, 'client_name', 'client_address',)">
+                                    <input class="form-control" type="text" id="client_number" value="11111111" placeholder="Ingrese Número..." onchange="consultar_documento(this.value, 'client_name', 'client_address', 'select_tipodocumento')" onkeyup="validar_numeros(this.id)">
                                 </div>
                                 <div class="form-group ocul col-md-4">
                                     <label for="client_name">Nombre:</label>
@@ -120,7 +120,7 @@
                                 </div>
                                 <div class="form-group ocul col-md-4">
                                     <label for="client_name">Domicilio Fiscal:</label>
-                                    <input class="form-control" type="text" id="client_address" value="PÚBLICO EN GENERAL" placeholder="Ingrese Razón Social...">
+                                    <input class="form-control" type="text" id="client_address" value="SIN DIRECCIÓN" placeholder="Ingrese Razón Social...">
                                 </div>
                                 <div class="form-group ocul_remitente col-lg-3">
                                     <label for="tipo_trans">Tipo de Transporte</label>
@@ -151,6 +151,31 @@
                                 <div class="form-group ocul_remitente col-lg-3" id="div_otros">
                                     <label for="motivo_tras_otros">Detalle OTROS</label>
                                     <textarea name="motivo_tras_otros" id="motivo_tras_otros" style="font-size: 10pt;" rows="1" class="form-control" maxlength="70"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="checkbox" id="documento_relacionado" class="form-group">
+                                    <label for="documento_relacionado" style="background: #4e78ee; color: white; border-radius: .35rem;"><strong>DOCUMENTO RELACIONADO</strong></label>
+                                </div>
+                            </div>
+                            <div class="row" id="div_documento_relacion" style="display: none">
+                                <div class="form-group col-md-2">
+                                    <label for="serie_documento_relacionado">Serie</label>
+                                    <input class="form-control" type="text" id="serie_documento_relacionado" maxlength="4">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="correlativo_documento_relacionado">Correlativo</label>
+                                    <input class="form-control" type="text" id="correlativo_documento_relacionado" onkeyup="validar_numeros(this.id)">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="tipo_documento_relacionado">Tipo Documento Relacionado</label>
+                                    <select class="form-control" name="tipo_documento_relacionado" id="tipo_documento_relacionado">
+                                        <option style="font-size: 10pt;" value="01">FACTURA</option>
+                                        <option style="font-size: 10pt;" value="03">BOLETA</option>
+                                        <option style="font-size: 10pt;" value="09">GUIA DE REMISION REMITENTE</option>
+                                        <option style="font-size: 10pt;" value="31">GUIA DE REMISION TRANSPORTISTA</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
@@ -240,7 +265,7 @@
                                         </div>
                                         <div id="div_transportista" class="card-body collapse">
                                             <div class="row">
-                                                <div class="col-lg-3 ocul_remitente">
+                                                <div class="col-lg-2 ocul_remitente">
                                                     <label for="tipo_documento_trans">Tipo Documento</label>
                                                     <select class="form-control" name="tipo_documento_trans" id="tipo_documento_trans">
                                                         <!--<option value="">Seleccionar...</option>-->
@@ -255,7 +280,7 @@
                                                 </div>
                                                 <div class="col-lg-2 ocul_remitente">
                                                     <label for="numero_doc_trans">Nº Documento</label>
-                                                    <input type="text" id="numero_doc_trans" class="form-control" onkeyup="validar_numeros(this.id)">
+                                                    <input type="text" id="numero_doc_trans" class="form-control" onkeyup="validar_numeros(this.id)" onchange="consultar_documento(this.value, 'denominacion_trans', '', 'tipo_documento_trans')">
                                                 </div>
                                                 <div class="col-lg-4 ocul_remitente">
                                                     <label for="denominacion_trans">Transporte Denominación</label>
@@ -341,7 +366,7 @@
                                                 </div>
                                                 <div class="col-lg-3">
                                                     <label for="numero_doc_dest">Nº documento</label>
-                                                    <input type="text" id="numero_doc_dest" class="form-control" onkeyup="validar_numeros(this.id)" >
+                                                    <input type="text" id="numero_doc_dest" class="form-control" onkeyup="validar_numeros(this.id)" onchange="consultar_documento(this.value, 'nombre_dest', 'direccion_dest', 'tipo_documento_dest')" >
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <label for="nombre_dest">Nombre del Destinatario</label>
@@ -434,7 +459,7 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-12" style="text-align: right">
-                                    <br><button onclick="preguntar_guia_remision()" type="submit" class="btn btn-primary submitBtn"><i class="fa fa-check"></i> Generar</button>
+                                    <br><button onclick="preguntar('¿Está seguro de Generar esta Guía?', 'guardar_remision','Si', 'No')" type="submit" class="btn btn-primary submitBtn"><i class="fa fa-check"></i> Generar</button>
                                 </div>
                             </div>
                         </div>
@@ -465,6 +490,13 @@
         $('#div_otros').hide()
     });
 
+    $('#documento_relacionado').change(function() {
+        if (this.checked) {
+            $('#div_documento_relacion').show();
+        } else {
+            $('#div_documento_relacion').hide();
+        }
+    });
     function tipo_guia(){
         let tipo_guia = $("#tipo_guia").val();
         if(tipo_guia=='31'){
@@ -528,6 +560,26 @@
         }
     });
 
+    function clean_cliente(){
+        //$('#select_tipodocumento').val('')
+        $('#client_number').val('')
+        $('#client_name').val('')
+        $('#client_address').val('')
+    }
+
+    document.getElementById('select_tipodocumento').addEventListener('change', function() {
+        clean_cliente()
+    });
+    document.getElementById('client_number').addEventListener('change', function() {
+        let num = $('#select_tipodocumento').val();
+        switch (num){
+            case '4': if(this.value.length!=11){ respuesta('RUC debe ser 11 Digitos','error');clean_cliente()  } break;
+
+            case '2': if(this.value.length!=8){ respuesta('DNI debe ser 8 Digitos','error');clean_cliente()  } break;
+            case '-': if(this.value.length <= 8){ respuesta('Minimo 8 Digitos','error');this.value='11111111'  } break;
+            default: break;
+        }
+    });
     document.getElementById('numero_doc_trans').addEventListener('change', function() {
         let num = $('#tipo_documento_trans').val();
         switch (num){
@@ -538,7 +590,7 @@
             default: break;
         }
     });
-    /*document.getElementById('numero_doc_con').addEventListener('change', function() {
+    document.getElementById('numero_doc_con').addEventListener('change', function() {
         let num = $('#tipo_documento_con').val();
         switch (num){
             case '6': if(this.value.length!=11){ respuesta('RUC debe ser 11 Digitos','error');this.value=''  } break;
@@ -547,7 +599,7 @@
             case '-': if(this.value.length <= 8){ respuesta('Minimo 8 Digitos','error');this.value='11111111'  } break;
             default: break;
         }
-    });*/
+    });
 
     function serie_correlativo(){
         let valor = true
@@ -611,21 +663,25 @@
 
     }
 
-    function preguntar_guia_remision(){
-        alertify.confirm('Generar Guía de Remisión', '¿Está seguro de Generar esta Guía?',
-            function(){ guardar_remision() }
-            , function(){ alertify.error('Operacion Cancelada')});
-    }
     function guardar_remision(){
         var valor = true;
         let razon_conductor = '';
-        let id_empresa = $('#id_empresa').val();
+        let id_empresa = 1;
         let tipo_guia = $('#tipo_guia').val();
         let id_serie = $('#id_serie').val();
         let fecha_emision = $('#fecha_emision').val();
+        //INICIO - DATOS DEL CLIENTE
+        let cliente_tipodocumento = $('#select_tipodocumento').val();
+        let client_number = $('#client_number').val();
+        let client_name = $('#client_name').val();
+        let client_address = $('#client_address').val();
+        //FIN - DATOS DEL CLIENTE
         let motivo_tras = $('#motivo_tras').val();
         let motivo_tras_otros = $('#motivo_tras_otros').val();
         let tipo_trans = $('#tipo_trans').val();
+        let serie_documento_relacionado = $('#serie_documento_relacionado').val();
+        let correlativo_documento_relacionado = $('#correlativo_documento_relacionado').val();
+        let tipo_documento_relacionado = $('#tipo_documento_relacionado').val();
         let fecha_tras = $('#fecha_tras').val();
         let peso_bruto = $('#peso_bruto').val();
         let peso_unidad_medida = $('#peso_unidad_medida').val();
@@ -634,8 +690,8 @@
         let numero_doc_trans = $('#numero_doc_trans').val();
         let denominacion_trans = $('#denominacion_trans').val();
         let num_placa_trans = $('#num_placa_trans').val();
-        let id_conductor = $('#id_conductor').val();
-        //let numero_doc_con = $('#numero_doc_con').val();
+        let tipo_documento_con = $('#tipo_documento_con').val();
+        let numero_doc_con = $('#numero_doc_con').val();
         let nombre_con = $('#nombre_con').val();
         let apellido_con = $('#apellido_con').val();
         let licencia_con = $('#licencia_con').val();
@@ -654,16 +710,21 @@
         let nombre_dest = $('#nombre_dest').val();
         let direccion_dest = $('#direccion_dest').val();
 
+
         valor = validar_campo_vacio('id_empresa',id_empresa, valor)
         valor = validar_campo_vacio('tipo_guia',tipo_guia, valor)
         valor = validar_campo_vacio('id_serie',id_serie, valor)
+        valor = validar_campo_vacio('select_tipodocumento',cliente_tipodocumento, valor)
+        valor = validar_campo_vacio('client_number',client_number, valor)
+        valor = validar_campo_vacio('client_name',client_name, valor)
+        //valor = validar_campo_vacio('client_address',client_address, valor)
         valor = validar_campo_vacio('peso_bruto',peso_bruto, valor)
         valor = validar_campo_vacio('peso_unidad_medida',peso_unidad_medida, valor)
         valor = validar_campo_vacio('fecha_tras',fecha_tras, valor)
         if(tipo_trans!=='01'){
             valor = validar_campo_vacio('num_placa_trans',num_placa_trans, valor)
-            valor = validar_campo_vacio('id_conductor',id_conductor, valor)
-            //valor = validar_campo_vacio('numero_doc_con',numero_doc_con, valor)
+            valor = validar_campo_vacio('tipo_documento_con',tipo_documento_con, valor)
+            valor = validar_campo_vacio('numero_doc_con',numero_doc_con, valor)
             valor = validar_campo_vacio('nombre_con',nombre_con, valor)
             valor = validar_campo_vacio('apellido_con',apellido_con, valor)
             valor = validar_campo_vacio('licencia_con',licencia_con, valor)
@@ -692,21 +753,33 @@
             valor = validar_campo_vacio('nombre_dest',nombre_dest, valor)
             valor = validar_campo_vacio('direccion_dest',direccion_dest, valor)
         }
+        if(document.getElementById('documento_relacionado').checked){
+            valor = validar_campo_vacio('serie_documento_relacionado',serie_documento_relacionado, valor)
+            valor = validar_campo_vacio('correlativo_documento_relacionado',correlativo_documento_relacionado, valor)
+            valor = validar_campo_vacio('tipo_documento_relacionado',tipo_documento_relacionado, valor)
+        }
         //valor = false
         if (valor){
             let contenido = JSON.stringify(arr_contenido);
             if(contenido.length>0){
                 $.ajax({
                     type: "POST",
-                    url: urlweb + "api/ComprobanteElectronico/guardar_guia",
+                    url: urlweb + "api/Guiasremision/guardar_guia",
                     data: {
                         'id_empresa': id_empresa,
                         'tipo_guia': tipo_guia,
                         'id_serie': id_serie,
+                        'cliente_tipodocumento': cliente_tipodocumento,
+                        'client_number': client_number,
+                        'client_name': client_name,
+                        'client_address': client_address,
                         'fecha_emision':fecha_emision ,
                         'motivo_tras': motivo_tras,
                         'motivo_tras_otros': motivo_tras_otros,
                         'tipo_trans':tipo_trans ,
+                        'serie_documento_relacionado':serie_documento_relacionado ,
+                        'correlativo_documento_relacionado':correlativo_documento_relacionado ,
+                        'tipo_documento_relacionado':tipo_documento_relacionado ,
                         'fecha_tansp':fecha_tras ,
                         'peso_bruto':peso_bruto ,
                         'peso_unidad_medida':peso_unidad_medida ,
@@ -721,7 +794,8 @@
                         'numero_doc_dest': numero_doc_dest ,
                         'nombre_dest': nombre_dest ,
                         'direccion_dest': direccion_dest ,
-                        'id_conductor': id_conductor ,
+                        'tipo_documento_con': tipo_documento_con ,
+                        'numero_doc_con': numero_doc_con ,
                         'nombre_con':razon_conductor ,
                         'licencia_con': licencia_con ,
                         'ubigeo_partida': ubigeo_partida ,
@@ -739,8 +813,8 @@
                             case 1:
                                 respuesta('¡Guardado Correctamente!...', 'success');
                                 setTimeout(function () {
-                                    //location.reload()
-                                    location.href = urlweb +'ComprobanteElectronico/guias_remision_pendientes'
+                                    location.reload()
+                                    //location.href = urlweb +'Guiasremision/guias_remision_pendientes'
                                 }, 800);
                                 break;
                             case 3:
@@ -791,7 +865,7 @@
                 show();
                 clean();
             }else{
-                alertify.error("La cantidad debe ser mayor que 0");
+                respuesta('¡La cantidad debe ser mayor que 0!','error');
             }
         }
 
@@ -951,7 +1025,7 @@
         $('#select_tipodocumento').val(id_tipodocumento)
         $('#client_number').val(client_numero)
         $('#client_name').val(cliente_razonsocial)
-        $('#client_direccion').val(cliente_direccion)
+        $('#client_address').val(cliente_direccion)
         respuesta('El cliente se agregó correctamente!','success');
 
     }

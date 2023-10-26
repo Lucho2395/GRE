@@ -1,21 +1,22 @@
 
 //CONSULTAR DATOS CLIENTE
 
-function consultar_documento(valor, client_name, client_address){
-    var tipo_doc = $('#select_tipodocumento').val();
+function consultar_documento(valor, client_name, client_address, tipo_documento){
+    var tipo_doc = $('#'+tipo_documento).val();
     $.ajax({
         type: "POST",
         url: urlweb + "api/Cliente/obtener_datos_x_dni",
         data: "numero="+valor,
         dataType: 'json',
         success:function (r) {
+            respuesta('Buscando...');
             if(r.result.resultado == 1){
                 $("#"+client_name).val(r.result.name);
                 $("#"+client_address).val(r.result.direccion);
             }else{
-                if(tipo_doc == "2"){
+                if(tipo_doc == "1"){
                     ObtenerDatosDni(valor, client_name, client_address);
-                }else if(tipo_doc == "4"){
+                }else if(tipo_doc == "6"){
                     if(valor.length == 11){
                         ObtenerDatosRuc(valor, client_name, client_address)
                     }else{

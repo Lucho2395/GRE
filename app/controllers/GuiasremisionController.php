@@ -64,4 +64,52 @@ class GuiasremisionController
             echo "<script language=\"javascript\">window.location.href=\"". _SERVER_ ."\";</script>";
         }
     }
+
+    public function guardar_guia(){
+        try{
+            $message = "We did it. Your awesome... and beatiful";
+            $model = new Guiasremision();
+            //Start Evaluation Of Data Integrity
+            $ok_data = true;
+            $result = 2;
+
+            //$ok_data = $this->validar->validar_parametro('cliente_telefono', 'POST',true,$ok_data,500,'numero',0);
+            //End of Data Integrity Evaluation
+            //Start Push Data
+            if($ok_data){
+                //verificamos si existe algun cliente con el numero de documento
+                $validacion = $this->cliente->validarcliente($_POST['client_number']);
+                if(!$validacion){
+                    $tipoDocumento_cliente = $this->cliente->listar_tipodocumento_x_codigo($_POST['cliente_tipodocumento']);
+                    $model->id_tipodocumento = $tipoDocumento_cliente->id_tipodocumento;
+                    $model->cliente_numero = $_POST['client_number'];
+                    $model->cliente_razonsocial = $_POST['client_name'];
+                    $model->cliente_direccion = (!empty($_POST['client_address']))?$_POST['client_address']:null;
+                    $model->cliente_telefono = null;
+
+                    $result = $this->cliente->guardar_cliente($model);
+                    $message = 'Guardado Correctamente';
+                }
+
+                if($result == 1){
+                    $consulta_cliente = $this->cliente->listar_cliente_x_numero($_POST['client_number']);
+                    $id_cliente = $consulta_cliente->id_cliente;
+                }
+
+            } else {
+                //Code 6: False Data Integrity
+                $result = 6;
+                $message = "Code 6: Fail Data Integrity";
+            }
+        } catch (Throwable $e){
+            $this->log->insertar($e->getMessage(), get_class($this).'|'.__FUNCTION__);
+            //Code 2: General Error
+            $result = 2;
+            $message = "Code 2: General Error";
+        }
+        //Result
+        $response = array("code" => $result,"message" => $message);
+        $data = array("result" => $response);
+        echo json_encode($data);
+    }
 }

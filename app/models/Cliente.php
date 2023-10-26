@@ -27,6 +27,18 @@ class Cliente
             return [];
         }
     }
+    public function listar_tipodocumento_x_codigo($codigo)
+    {
+        try{
+            $sql = 'select * from tipo_documentos where tipodocumento_codigo = ?';
+            $stm = $this->pdo->prepare($sql);
+            $stm->execute();
+            return $stm->fetch();
+        } catch (Throwable $e){
+            $this->log->insertar($e->getMessage(), get_class($this).'|'.__FUNCTION__);
+            return [];
+        }
+    }
     public function listar_clientes()
     {
         try{

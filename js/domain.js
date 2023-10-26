@@ -46,6 +46,46 @@ function validar_numeros_decimales_dos(id) {
     var text = document.getElementById(id).value;
     var expreg = new RegExp(/^[+-]?[0-9]*$/);
     var expreg2 = new RegExp(/^[+-]?[0-9]+([.]+)?$/);
+    var expreg3 = new RegExp(/^[+-]?[0-9]+([.][0-9]{1,2})?$/);
+    if(expreg.test(text)){
+        return true;
+    } else {
+        if(expreg2.test(text)){
+            return true;
+        } else {
+            if (expreg3.test(text)){
+                return true;
+            } else {
+                //alertify.error("Carácter Inválido");
+                var re = /[a-zA-ZñáéíóúÁÉÍÓÚ´,*+?^$&!¡¿#%/{}()='|[\]\\"]/g;
+                document.getElementById(id).value = text.replace(re, '');
+                text = document.getElementById(id).value;
+                var long1 = text.length;
+                var count = 1;
+                if(long1 !== 0){
+                    while (!expreg3.test(text)){
+                        if(count !== 5){
+                            var long = text.length;
+                            var text_to_extract = long - 1;
+                            document.getElementById(id).value = text.substring(0, text_to_extract);
+                            text = document.getElementById(id).value;
+                            count++;
+                        } else {
+                            document.getElementById(id).value = '0';
+                            return false;
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+
+    }
+}
+function validar_numeros_decimales_tres(id) {
+    var text = document.getElementById(id).value;
+    var expreg = new RegExp(/^[+-]?[0-9]*$/);
+    var expreg2 = new RegExp(/^[+-]?[0-9]+([.]+)?$/);
     var expreg3 = new RegExp(/^[+-]?[0-9]+([.][0-9]{1,3})?$/);
     if(expreg.test(text)){
         return true;
