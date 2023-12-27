@@ -78,7 +78,7 @@ class ClienteController
                 }else{
                     $validacion = $this->cliente->validarcliente($_POST['cliente_numero']);
                 }
-                if($validacion){
+                if(!empty($validacion)){
                     $result = 5; //Cliente ya existe
                     $message = 'Cliente ya existe';
                 }else{

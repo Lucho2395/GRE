@@ -32,7 +32,7 @@ class Cliente
         try{
             $sql = 'select * from tipo_documentos where tipodocumento_codigo = ?';
             $stm = $this->pdo->prepare($sql);
-            $stm->execute();
+            $stm->execute([$codigo]);
             return $stm->fetch();
         } catch (Throwable $e){
             $this->log->insertar($e->getMessage(), get_class($this).'|'.__FUNCTION__);
@@ -70,8 +70,8 @@ class Cliente
             $sql = 'select * from clientes where cliente_numero = ? and id_cliente <> ?';
             $stm = $this->pdo->prepare($sql);
             $stm->execute([$cliente_numero, $id_cliente]);
-            $resultado = $stm->fetch();
-            (isset($resultado->id_cliente))?$result=true:$result=false;
+            $result = $stm->fetch();
+            //(isset($resultado->id_cliente))?$result=true:$result=false;
 
         }catch (Exception $e){
             $this->log->insertar($e->getMessage(), get_class($this).'|'.__FUNCTION__);
@@ -85,8 +85,8 @@ class Cliente
             $sql = 'select * from clientes where cliente_numero = ? limit 1';
             $stm = $this->pdo->prepare($sql);
             $stm->execute([$cliente_numero]);
-            $resultado = $stm->fetch();
-            (isset($resultado->id_cliente))?$result=true:$result=false;
+            $result = $stm->fetch();
+            //(isset($resultado->id_cliente))?$result=true:$result=false;
 
         }catch (Exception $e){
             $this->log->insertar($e->getMessage(), get_class($this).'|'.__FUNCTION__);

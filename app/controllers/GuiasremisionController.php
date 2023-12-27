@@ -68,7 +68,7 @@ class GuiasremisionController
     public function guardar_guia(){
         try{
             $message = "We did it. Your awesome... and beatiful";
-            $model = new Guiasremision();
+            $model = new Cliente();
             //Start Evaluation Of Data Integrity
             $ok_data = true;
             $result = 2;
@@ -79,21 +79,79 @@ class GuiasremisionController
             if($ok_data){
                 //verificamos si existe algun cliente con el numero de documento
                 $validacion = $this->cliente->validarcliente($_POST['client_number']);
-                if(!$validacion){
-                    $tipoDocumento_cliente = $this->cliente->listar_tipodocumento_x_codigo($_POST['cliente_tipodocumento']);
-                    $model->id_tipodocumento = $tipoDocumento_cliente->id_tipodocumento;
-                    $model->cliente_numero = $_POST['client_number'];
-                    $model->cliente_razonsocial = $_POST['client_name'];
-                    $model->cliente_direccion = (!empty($_POST['client_address']))?$_POST['client_address']:null;
-                    $model->cliente_telefono = null;
-
-                    $result = $this->cliente->guardar_cliente($model);
-                    $message = 'Guardado Correctamente';
+                $tipoDocumento_cliente = $this->cliente->listar_tipodocumento_x_codigo($_POST['cliente_tipodocumento']);
+                $model->id_tipodocumento = $tipoDocumento_cliente->id_tipodocumento;
+                $model->cliente_numero = $_POST['client_number'];
+                $model->cliente_razonsocial = $_POST['client_name'];
+                $model->cliente_direccion = (!empty($_POST['client_address']))?$_POST['client_address']:'Sin Dirección';
+                $model->cliente_telefono = null;
+                if(!empty($validacion)){
+                    //EDITAMOS EL CLIENTE POR SI ACTUALIZA ALGUNA DIRECCION O RAZON SOCIAL
+                    $model->id_cliente = $validacion->id_cliente;
                 }
+                $result = $this->cliente->guardar_cliente($model);
+                $message = 'Cliente Guardado Correctamente';
 
                 if($result == 1){
                     $consulta_cliente = $this->cliente->listar_cliente_x_numero($_POST['client_number']);
                     $id_cliente = $consulta_cliente->id_cliente;
+
+                    $modelg = new Guiasremision();
+                    $modelg->id_usuario = $this->encriptar->desencriptar($_SESSION['c_u'], _FULL_KEY_);
+                    $modelg->id_empresa = 1;
+                    $modelg->id_cliente = $id_cliente;
+
+                    $modelg->remision_tipo_comprobante= $_POST['tipo_guia'];
+
+                    $serie = $this->guiasremision->serie_guia_x_id($_POST['id_serie']);
+                    $modelg->serie= $serie->serie;
+                    $modelg->correlativo= $serie->correlativo+1;
+
+                    $modelg->fecha_creacion = date('Y-m-d H:i:s');
+                    $modelg->guia_estado = 0;
+                    $modelg->fecha_emision = $_POST['fecha_emision'];
+                    $modelg->guia_motivo = $_POST['motivo_tras'];
+                    $modelg->motivo_tras_otros = $_POST['motivo_tras_otros'];
+                    $modelg->guia_tipo_trans = $_POST['tipo_trans'];
+                    $modelg->guia_fecha_traslado = $_POST['fecha_tras'];
+                    $modelg->guia_peso_bruto = $_POST['peso_bruto'];
+                    $modelg->peso_unidad_medida = $_POST['peso_unidad_medida'];
+                    $modelg->guia_n_bulto = $_POST['numero_bultos'];
+                    $modelg->tipo_documento_trans = $_POST['tipo_documento_trans'];
+                    $modelg->numero_doc_trans = $_POST['numero_doc_trans'];
+                    $modelg->denominacion_trans = $_POST['denominacion_trans'];
+                    $modelg->guia_placa = $_POST['num_placa_trans'];
+                    $modelg->tuc_vehiculo = $_POST['tuc_vehiculo'];
+                    $modelg->certificado_mtc = $_POST['certificado_mtc'];
+                    $modelg->tipo_documento_con=$_POST['tipo_documento_con'];
+                    $modelg->numero_doc_con=$_POST['numero_doc_con'];
+                    $modelg->nombre_con=$_POST['nombre_con'];
+                    $modelg->apellido_con=$_POST['apellido_con'];
+                    $modelg->licencia_con = $_POST['licencia_con'];
+                    $modelg->tipo_documento_dest = $_POST['tipo_documento_dest'];
+                    $modelg->numero_doc_dest = $_POST['numero_doc_dest'];
+                    $modelg->nombre_dest = $_POST['nombre_dest'];
+                    $modelg->direccion_dest = $_POST['direccion_dest'];
+                    $modelg->ubigeo_partida = $_POST['ubigeo_partida'];
+                    $modelg->direccion_partida = $_POST['direccion_partida'];
+                    $modelg->cod_establec_partida = $_POST['cod_establec_partida'];
+                    $modelg->ubigeo_llegada = $_POST['ubigeo_llegada'];
+                    $modelg->direccion_llegada = $_POST['direccion_llegada'];
+                    $modelg->cod_establec_llegada = $_POST['cod_establec_llegada'];
+                    $modelg->observacion = $_POST['observacion'];
+                    $modelg->tipo_documento_relacionado= $_POST['tipo_documento_relacionado'];
+                    $modelg->serie_relacion= $_POST['serie_documento_relacionado'];
+                    $modelg->correlactivo_relacion= $_POST['correlativo_documento_relacionado'];
+                    $mt_codigo = microtime(true);
+                    $modelg->mt = $mt_codigo;
+                    $result = $this->guiasremision->guardar_guia($modelg);
+                    if($result == 1){
+                        $contenido = $_POST['contenido'];
+                        //ME QUEDE ACÁ, TENGO QUE GUARDAR EL DETALLE DE LA GUIA DE MANERA CORRECTA
+                    }
+
+                }else{
+                    $message = 'Error al guardar Cliente';
                 }
 
             } else {

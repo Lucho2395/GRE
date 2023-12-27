@@ -135,11 +135,11 @@
                                         <option value="">Seleccionar...</option>
                                         <option value="01" selected>VENTA</option>
                                         <option value="02">COMPRA</option>
-                                        <option value="03">VENTA CON ENTREGA A TERCEROS</option>
+                                        <!--<option value="03">VENTA CON ENTREGA A TERCEROS</option>-->
                                         <option value="04">TRASLADO ENTRE ESTABLECIMIENTOS</option>
                                         <option value="05">CONSIGNACIÓN</option>
-                                        <option value="06">DEVOLUCIÓN</option>
-                                        <option value="07">RECOJO DE BIENES TRANSFORMADOS</option>
+                                        <!--<option value="06">DEVOLUCIÓN</option>
+                                        <option value="07">RECOJO DE BIENES TRANSFORMADOS</option>-->
                                         <option value="08">IMPORTACION</option>
                                         <option value="09">EXPORTACION</option>
                                         <option value="13" >OTROS</option>
@@ -191,7 +191,7 @@
                                                 <th>Concepto</th>
                                                 <th>U.M</th>
                                                 <th>Cant.</th>
-                                                <th>Peso <span id="span_peso_unidad"></span></th>
+                                                <!--<th>Peso <span id="span_peso_unidad"></span></th>-->
                                                 <th>Acción</th>
                                             </tr>
                                             </thead>
@@ -214,11 +214,11 @@
                                                     </select>
                                                 </td>
                                                 <td>
-                                                    <input style="background: #fff !important;color:#000 !important;text-align: right" id="cant_guia" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
+                                                    <input style="background: #fff !important;color:#000 !important;text-align: right; width: 150px;" id="cant_guia" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
                                                 </td>
-                                                <td>
+                                                <!--<td>
                                                     <input style="background: #fff !important;color:#000 !important;text-align: right" id="peso_item" type="text" class="form-control" onkeyup="return validar_numeros_decimales_tres(this.id)">
-                                                </td>
+                                                </td>-->
                                                 <td><a style="color:#fff;font-weight: bold;font-size: large" onclick="add()" class="btn btn-success"><i class="fa fa-check"></i></a></td>
                                             </tr>
                                         </table>
@@ -239,7 +239,7 @@
                                                 </div>
                                                 <div class="col-lg-2">
                                                     <label for="peso_bruto">Peso Bruto</label>
-                                                    <input type="text" readonly id="peso_bruto" value="0" onkeyup="validar_numeros_decimales_dos(this.id)" class="form-control">
+                                                    <input type="text" id="peso_bruto" value="0" onkeyup="validar_numeros_decimales_dos(this.id)" class="form-control">
                                                 </div>
                                                 <div class="col-lg-3">
                                                     <label for="peso_unidad_medida">Peso - unidad de medidad</label>
@@ -287,7 +287,7 @@
                                                     <textarea name="denominacion_trans" style="font-size: 10pt;" id="denominacion_trans" rows="1" onkeyup="mayuscula(this.id)" class="form-control"></textarea>
                                                     <!--<input type="text" id="denominacion_trans" onkeyup="mayuscula(this.id)" class="form-control">-->
                                                 </div>
-                                                <div class="col-lg-3">
+                                                <div class="col-lg-3" id="div_num_placa_trans">
                                                     <label for="num_placa_trans">Transportista Nº Placa</label>
                                                     <input type="text" id="num_placa_trans" class="form-control" placeholder="SIN GUIONES">
                                                 </div>
@@ -373,7 +373,7 @@
                                                     <textarea name="nombre_dest" id="nombre_dest" rows="2" onkeyup="mayuscula(this.id)" style="font-size: 10pt;" class="form-control"></textarea>
                                                     <!--<input type="text" id="nombre_con" onkeyup="mayuscula(this.id)" name="nombre_con" class="form-control" maxlength="250">-->
                                                 </div>
-                                                <div class="col-lg-3">
+                                                <div class="col-lg-3" style="display: none">
                                                     <label for="direccion_dest">Dirección del Destinatario</label>
                                                     <textarea name="direccion_dest" id="direccion_dest" rows="2" onkeyup="mayuscula(this.id)" style="font-size: 8pt;" class="form-control"></textarea>
                                                     <!--<input type="text" id="nombre_con" onkeyup="mayuscula(this.id)" name="nombre_con" class="form-control" maxlength="250">-->
@@ -543,8 +543,10 @@
     document.getElementById('tipo_trans').addEventListener('change', function() {
         if(this.value=='02'){
             $('#datos_conductor').show();
+            $('#div_num_placa_trans').show();
         }else if(this.value=='01'){
             $('#datos_conductor').hide();
+            $('#div_num_placa_trans').hide();
         }
     });
     document.getElementById('fecha_tras').addEventListener('change', function() {
@@ -711,13 +713,13 @@
         let direccion_dest = $('#direccion_dest').val();
 
 
-        valor = validar_campo_vacio('id_empresa',id_empresa, valor)
+        //valor = validar_campo_vacio('id_empresa',id_empresa, valor)
         valor = validar_campo_vacio('tipo_guia',tipo_guia, valor)
         valor = validar_campo_vacio('id_serie',id_serie, valor)
         valor = validar_campo_vacio('select_tipodocumento',cliente_tipodocumento, valor)
         valor = validar_campo_vacio('client_number',client_number, valor)
         valor = validar_campo_vacio('client_name',client_name, valor)
-        //valor = validar_campo_vacio('client_address',client_address, valor)
+        valor = validar_campo_vacio('client_address',client_address, valor)
         valor = validar_campo_vacio('peso_bruto',peso_bruto, valor)
         valor = validar_campo_vacio('peso_unidad_medida',peso_unidad_medida, valor)
         valor = validar_campo_vacio('fecha_tras',fecha_tras, valor)
@@ -744,14 +746,11 @@
             valor = validar_campo_vacio('tipo_documento_trans',tipo_documento_trans, valor)
             valor = validar_campo_vacio('numero_doc_trans',numero_doc_trans, valor)
             valor = validar_campo_vacio('denominacion_trans',denominacion_trans, valor)
-            valor = validar_campo_vacio('tipo_documento_trans',tipo_documento_trans, valor)
-            valor = validar_campo_vacio('numero_doc_trans',numero_doc_trans, valor)
-            valor = validar_campo_vacio('denominacion_trans',denominacion_trans, valor)
         }else{
             valor = validar_campo_vacio('tipo_documento_dest',tipo_documento_dest, valor)
             valor = validar_campo_vacio('numero_doc_dest',numero_doc_dest, valor)
             valor = validar_campo_vacio('nombre_dest',nombre_dest, valor)
-            valor = validar_campo_vacio('direccion_dest',direccion_dest, valor)
+            //valor = validar_campo_vacio('direccion_dest',direccion_dest, valor)
         }
         if(document.getElementById('documento_relacionado').checked){
             valor = validar_campo_vacio('serie_documento_relacionado',serie_documento_relacionado, valor)
@@ -780,7 +779,7 @@
                         'serie_documento_relacionado':serie_documento_relacionado ,
                         'correlativo_documento_relacionado':correlativo_documento_relacionado ,
                         'tipo_documento_relacionado':tipo_documento_relacionado ,
-                        'fecha_tansp':fecha_tras ,
+                        'fecha_tras':fecha_tras ,
                         'peso_bruto':peso_bruto ,
                         'peso_unidad_medida':peso_unidad_medida ,
                         'numero_bultos': numero_bultos ,
@@ -796,7 +795,8 @@
                         'direccion_dest': direccion_dest ,
                         'tipo_documento_con': tipo_documento_con ,
                         'numero_doc_con': numero_doc_con ,
-                        'nombre_con':razon_conductor ,
+                        'nombre_con':nombre_con ,
+                        'apellido_con':apellido_con ,
                         'licencia_con': licencia_con ,
                         'ubigeo_partida': ubigeo_partida ,
                         'direccion_partida': direccion_partida ,
@@ -846,19 +846,19 @@
         let descripcion = $("#descripcion").val();
         let cant_guia = $("#cant_guia").val() * 1;
         let um_guia = $("#um_guia").val()
-        let peso_item = $("#peso_item").val()
+        /*let peso_item = $("#peso_item").val()*/
         let valor = true
         valor = validar_campo_vacio("descripcion", descripcion, valor)
         valor = validar_campo_vacio("cant_guia", cant_guia, valor)
         valor = validar_campo_vacio("um_guia", um_guia, valor)
-        valor = validar_campo_vacio("peso_item", peso_item, valor)
+        /*valor = validar_campo_vacio("peso_item", peso_item, valor)*/
         if(valor){
             if(cant_guia >= 0){
                 arr_contenido.push({
                     'descripcion' : descripcion,
                     'cantidad'  : cant_guia,
-                    'unidad_medida'  : um_guia,
-                    'peso_item'  : peso_item
+                    'unidad_medida'  : um_guia
+                    /*'peso_item'  : peso_item*/
                 })
                 //arr_contenido += nota_conteo + "-.-."+ nota_concepto + "-.-."+ nota_um + "-.-."+ nota_cant + "-.-."+ precio_unit + "-.-." + precio_total+ "/./.";
                 //$("#contenido").val(contenido);
@@ -874,7 +874,7 @@
         $("#descripcion").val('');
         $("#cant_guia").val('');
         $("#um_guia").val('NIU')
-        $("#peso_item").val('')
+        /*$("#peso_item").val('')*/
     }
     function show(){
         //llamamos el id del cuerpo del body
@@ -882,12 +882,12 @@
         let a = 1;
         let peso_total = 0;
         arr_contenido.map(arr=>{
-            peso_total = peso_total + arr['peso_item'] * 1
+            /*peso_total = peso_total + arr['peso_item'] * 1*/
             body_datos += "<tr style='text-align: center'><td>"+a+"</td>"+
                 "<td>"+arr['descripcion']+"</td>"+
                 "<td>"+arr['unidad_medida']+"</td>"+
                 "<td>"+arr['cantidad']+"</td>"+
-                "<td>"+arr['peso_item']+"</td>"+
+                /*"<td>"+arr['peso_item']+"</td>"+*/
                 "<td><a data-toggle=\"tooltip\" onclick='delete_detalle("+a+")' title=\"Eliminar\" type=\"button\" class=\"text-danger\" ><i class=\"fa fa-times ver_detalle\"></i></a></td>"+
                 "</tr>";
             a++;
@@ -907,7 +907,7 @@
         })
         $('#contenido_detalle_guia').html(body_datos)
         $('#conteo').html(a)
-        $('#peso_bruto').val(peso_total)
+        /*$('#peso_bruto').val(peso_total)*/
     }
 
     let arr_artificial = [];
@@ -918,8 +918,8 @@
                 arr_artificial.push({
                     'descripcion' : arr['descripcion'],
                     'cantidad'  : arr['cantidad'],
-                    'unidad_medida'  : arr['unidad_medida'],
-                    'peso_item'  : arr['peso_item']
+                    'unidad_medida'  : arr['unidad_medida']
+                    /*'peso_item'  : arr['peso_item']*/
                 })
             }
             a++;
